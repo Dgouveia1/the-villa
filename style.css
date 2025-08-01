@@ -1,0 +1,116 @@
+/* Estilos para o céu noturno e animações */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000010;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.night-sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000010, #0c0c28, #1a1a38);
+    z-index: -1;
+}
+
+/* Animação de brilho para as estrelas */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Função Sass para criar estrelas aleatórias */
+/* O CSS abaixo é o resultado compilado */
+#stars1 {
+    width: 1px; height: 1px; background: transparent;
+    box-shadow: 234px 89px #FFF, 765px 432px #FFF, 123px 567px #FFF, 876px 234px #FFF, 456px 876px #FFF, 987px 345px #FFF;
+    animation: twinkle 2s infinite;
+}
+#stars2 {
+    width: 2px; height: 2px; background: transparent;
+    box-shadow: 456px 123px #FFF, 876px 543px #FFF, 345px 987px #FFF, 654px 231px #FFF, 901px 678px #FFF, 112px 456px #FFF;
+    animation: twinkle 3s infinite;
+}
+#stars3 {
+    width: 1px; height: 1px; background: transparent;
+    box-shadow: 789px 890px #FFF, 210px 321px #FFF, 543px 654px #FFF, 876px 987px #FFF, 123px 432px #FFF, 567px 789px #FFF;
+    animation: twinkle 4s infinite;
+}
+
+.moon-container {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+}
+.moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f0e68c;
+    box-shadow: 0 0 20px #f0e68c, 0 0 40px #f0e68c;
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+.clock-section {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#clock-title {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    color: #D5A737;
+    text-shadow: 0 0 10px #D5A737;
+}
+
+#clock-display {
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+#notification-area {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #3CBC22;
+    height: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#notification-area.show {
+    opacity: 1;
+}
+
+/* Estilos para a silhueta da cidade */
+.city-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    z-index: 5;
+}
+.city-silhouette {
+    width: 100%;
+    height: 100%;
+    fill: #000;
+}
