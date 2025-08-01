@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Hour The Villa Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="night-sky">
+        <div id="stars1"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div class="moon-container">
+            <div class="moon"></div>
+        </div>
+    </div>
+
+    <section class="main-content">
+        <div class="container-new">
+            <div class="clock-section">
+                <h2 id="clock-title">Happy Hour The Villa Club</h2>
+                <div id="clock-display">--:--:--</div>
+                <div id="notification-area"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="city-container">
+        <div class="city-silhouette">
+            <svg width="100%" height="100%" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,120 L0,80 L50,80 L50,50 L100,50 L100,90 L150,90 L150,40 L200,40 L200,100 L250,100 L250,60 L300,60 L300,110 L350,110 L350,70 L400,70 L400,120 L450,120 L450,50 L500,50 L500,100 L550,100 L550,40 L600,40 L600,90 L650,90 L650,60 L700,60 L700,110 L750,110 L750,50 L800,50 L800,120 L850,120 L850,70 L900,70 L900,100 L950,100 L950,40 L1000,40 L1000,80 L1050,80 L1050,50 L1100,50 L1100,110 L1150,110 L1150,60 L1200,60 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
